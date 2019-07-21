@@ -1,4 +1,6 @@
 # Created by https://www.gitignore.io
+*.css
+*.css.map
 
 ### OSX ###
 .DS_Store

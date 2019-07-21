@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    resume
+{% endblock %}
+
+{% block head %}
+    <link href="{% static 'css/resume/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <header>
+        <h1> Slesa Adhikari </h1>
+        {% include 'nav.html' %}
+    </header>
+    <main>
+        <div class="left">
+            <section class="experience">
+                <h2> Experience </h2>
+                <ul>
+                    <li>
+                        <h4> title </h4>
+                        <p> abc def dfalf asdl asjd lasjdlasjdcm ms kasjd; as</p>
+                    </li>
+                    <li>
+                        <h4> title </h4>
+                        <p> abc def dfalf asdl asjd lasjdlasjdcm ms kasjd; as</p>
+                    </li>
+                    <li>
+                        <h4> title </h4>
+                        <p> abc def dfalf asdl asjd lasjdlasjdcm ms kasjd; as</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="education">
+                <h2> Education </h2>
+                <ul>
+                    <li> TA </li>
+                    <li> RA </li>
+                    <li> LIS </li>
+                </ul>
+            </section>
+        </div>
+        <div class="right">
+            <section class="skills">
+                <h2> Skills </h2>
+                <ul>
+                    <li> TA </li>
+                    <li> RA </li>
+                    <li> LIS </li>
+                </ul>
+            </section>
+            <section class="interests">
+                <h2> Interests </h2>
+                <ul>
+                    <li> TA </li>
+                    <li> RA </li>
+                    <li> LIS </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+{% endblock %}
