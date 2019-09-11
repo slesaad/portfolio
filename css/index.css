@@ -1,0 +1,116 @@
+/**
+sass --watch stylesheets:css
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", sans-serif;
+}
+
+.title {
+  background-image: url("/img/me.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 72px;
+}
+.title .tagline {
+  font-family: "Inconsolata", monospace;
+  color: rgba(255, 255, 255, 0.7);
+}
+.title .tagline::before {
+  content: "<";
+}
+.title .tagline::after {
+  content: "/>";
+}
+
+.projects {
+  display: flex;
+  height: 100vh;
+}
+.projects .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 64px;
+}
+.projects .details h3 {
+  font-weight: 500;
+  font-size: 48px;
+}
+.projects .details img {
+  width: 100%;
+  height: auto;
+}
+.projects .details p {
+  text-align: justify;
+}
+.projects .details.visible {
+  flex-basis: 30%;
+}
+.projects .project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .project-list .project-item {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-basis: calc(100% / 3);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #34495e;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+.projects .project-list .project-item h4 {
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+}
+.projects .project-list .project-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-list .project-item ul li {
+  text-align: center;
+  margin: 8px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+.projects .project-list .project-item .trophy {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: #f39c12;
+  font-size: 28px;
+}
+
+/*# sourceMappingURL=index.css.map */
