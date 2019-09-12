@@ -58,7 +58,7 @@ body {
     height: 100vh;
 
     .details {
-        display: flex;
+        display: none;
         justify-content: center;
         flex-direction: column;
         padding: 64px;
@@ -83,6 +83,7 @@ body {
     }
 
     .project-list {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
 
@@ -98,6 +99,8 @@ body {
             border: 1px solid #fff;
             color: #fff;
             cursor: pointer;
+
+            transition: all 1s ease-in-out;
 
             h4 {
                 font-weight: 500;
@@ -132,6 +135,159 @@ body {
                 color: #f39c12;
                 font-size: 28px;
             }
+
+            &.details {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+            }
         }
+    }
+}
+
+.timeline {
+    background-color: #ed5107;
+    margin: 0;
+    padding: 0 64px;
+
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+
+    ul {
+        // padding: 0 25%;
+        position: relative;
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.9);
+
+        li {
+            position: relative;
+            // width: 50%;
+            // padding-right: 36px;
+
+            h4 {
+                padding: 2px;
+                margin: 0;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            h5 {
+                padding: 2px;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            time {
+                color: rgba(0, 0, 0, 0.4);
+                font-size: 14px;
+            }
+
+            .more {
+                padding: 2px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.contact {
+    padding: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    a {
+        margin: 64px;
+        // padding: 36px;
+        color:#fff;
+        //background: #DB6E82;
+        border-radius:4px;
+        text-align:center;
+        text-decoration:none;
+        font-family:fontawesome;
+        font-size: 52px;
+        padding: 64px;
+        position: relative;
+        display: inline-block;
+        width:40px;
+        height:28px;
+        // padding-top:12px;
+        margin:0 2px;
+        transition: all .5s;
+    }
+
+    a:hover {
+        transform: scale(1.5) translateY(2px);
+        // background: #ef92a3;
+    }
+
+    a span {
+        color:#000;
+        position:absolute;
+        font-family: $font-mono;
+        font-weight: 100;
+        bottom:0;
+        left:-25px;
+        right:-25px;
+        padding:5px 7px;
+        margin: 26px;
+        z-index:-1;
+        font-size:10px;
+        border-radius:2px;
+        background:#fff;
+        visibility:hidden;
+        opacity:0;
+        -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* pop-up text arrow */
+
+    a span:before {
+        content:'';
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+        position:absolute;
+        bottom:-5px;
+        left:40px;
+    }
+
+    /* text pops up when icon is in hover state */
+
+    a:hover span {
+        bottom:50px;
+        visibility:visible;
+        opacity:1;
+    }
+
+    /* font awesome icons */
+
+    a:nth-of-type(1):before {
+        content:'\f0e0';
+    }
+    a:nth-of-type(2):before {
+        content:'\f095';
+    }
+    a:nth-of-type(3):before {
+        content:'\f08c';
+    }
+    a:nth-of-type(4):before {
+        content:'\f113';
+    }
+    a:nth-of-type(5):before {
+        content:'\f16d';
     }
 }
