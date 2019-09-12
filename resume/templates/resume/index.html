@@ -71,6 +71,20 @@
                 </ul>
 
             </section>
+            <section class="awards">
+                <h2> Awards </h2>
+                <ul>
+                    {% for award in awards %}
+                    <li>
+                        <h4> {{ award.title }} </h4>
+                        <h5> {{ award.organization }} </h5>
+                        <time> {{ award.year }} </time>
+                        <p> {{ award.description }} </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </section>
             <section class="interests">
                 <h2> Interests </h2>
                 <ul>

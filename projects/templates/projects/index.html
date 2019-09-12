@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    projects
+{% endblock %}
+
+{% block head %}
+    <link href="{% static 'css/projects/index.css' %}" rel="stylesheet">
+    <script src="{% static 'js/projects/index.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <header>
+        {% include 'nav.html' %}
+    </header>
+    <main>
+        {% for project in projects %}
+            <div class="project">
+                <div class="project_image" style="background-image: url('{% if project.image %}{{ project.image.file }}{% else %}{% static 'img/projects/default.jpg' %}{% endif %}');">
+
+                </div>
+                <div class="caption">
+                    <div class="title"> {{ project.title }} </div>
+                    <p> {{ project.description }} </p>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}

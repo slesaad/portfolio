@@ -3,7 +3,7 @@
 
 
 {% block title %}
-    Home
+    home
 {% endblock %}
 
 
@@ -13,19 +13,24 @@
 
 {% block body %}
     <div class="container">
-        <div class="title-block">
-            <h1>
-                Slesa Adhikari
-            </h1>
-        </div>
+        <img src="{% static 'img/slesa.jpg' %}">
+        <div class="title-container">
+            <div class="title-text">
+                <div class="title-block">
+                    <h1>
+                        Slesa Adhikari
+                    </h1>
+                </div>
 
-        <div class="nav-links">
-            <ul>
-                <li> <a href="{% url 'resume' %}"> Resume </a> </li>
-                <li> <a href="#"> Projects </a> </li>
-                <li> <a href="#"> Bio </a> </li>
-                <li> <a href="#"> Contact </a> </li>
-            </ul>
+                <div class="nav-links">
+                    <ul>
+                        <li> <a href="{% url 'resume' %}"> Resume </a> </li>
+                        <li> <a href="{% url 'projects' %}"> Projects </a> </li>
+                        <li> <a href="#"> Bio </a> </li>
+                        <li> <a href="#"> Contact </a> </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

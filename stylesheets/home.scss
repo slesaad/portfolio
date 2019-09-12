@@ -4,14 +4,27 @@ body {
     background-color: $color-primary;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     .container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        width: 100vw;
+
+        img {
+            height: 100vh;
+            width: auto;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
 
         .title-block {
 

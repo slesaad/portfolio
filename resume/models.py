@@ -45,3 +45,16 @@ class Interest(models.Model):
 
     class Meta:
         ordering = ('order',)
+
+
+class Award(models.Model):
+    title = models.CharField(max_length=256)
+    organization = models.CharField(max_length=256)
+    year = models.IntegerField()
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ('year',)

@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from .models import Education, Experience, Skill, Interest
+from .models import Education, Experience, Skill, Interest, Award
 
 
 class ResumeView(TemplateView):
@@ -12,5 +12,6 @@ class ResumeView(TemplateView):
         context['experiences'] = Experience.objects.all()
         context['skills'] = Skill.objects.all()
         context['interests'] = Interest.objects.all()
+        context['awards'] = Award.objects.all()
 
         return context
