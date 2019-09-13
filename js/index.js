@@ -1,4 +1,12 @@
 $(document).ready(() => {
+    $('.tagline').t({
+        speed_vary: true,
+        mistype: 1,
+        caret: "_",
+        blink: true,
+        blink_perm: false,
+    });
+
     $('.project-item').on('click', (e) => {
         const item = $(e.currentTarget);
         if (item.hasClass('details')) {
