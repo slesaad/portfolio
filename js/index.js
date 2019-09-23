@@ -7,7 +7,7 @@ $(document).ready(() => {
         blink_perm: false,
     });
 
-    $('.project-item').on('click', (e) => {
+    $('.project-item').on('mouseover', (e) => {
         const item = $(e.currentTarget);
         if (item.hasClass('details')) {
             item.removeClass('details');
