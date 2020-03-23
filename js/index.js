@@ -9,11 +9,11 @@ $(document).ready(() => {
 
     $('.project-item').on('mouseover', (e) => {
         const item = $(e.currentTarget);
-        if (item.hasClass('details')) {
-            item.removeClass('details');
-        } else {
-            $('.project-item').removeClass('details');
-            item.addClass('details');
-        }
+        // if (item.hasClass('details')) {
+        //     item.removeClass('details');
+        // } else {
+        // }
+        $('.project-item').removeClass('details');
+        item.addClass('details');
     });
 });
