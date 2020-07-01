@@ -61,7 +61,7 @@ body {
         text-align: center;
         margin: 8px;
         font-size: 14px;
-        color: rgba(0, 0, 0);
+        color: rgba(0, 0, 0, 1);
         text-transform: uppercase;
         border-radius: 8px;
         padding: 4px 8px;
@@ -387,11 +387,39 @@ body {
     }
 
     .timeline {
-        ul {
-            li {
-                width: 320px;
-            }
-        }
+      height: auto;
+      ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 32px 0;
+
+          li {
+              // flex-basis: 100%;
+              border: 0;
+              padding: 0 64px;
+              margin: 32px 64px;
+              height: auto;
+
+              &::before {
+                  display: none;
+              }
+
+              p {
+                  margin: 10px 0;
+                  font-size: 12px;
+                  opacity: 1;
+              }
+
+              time {
+                  position: static;
+              }
+          }
+      }
+    }
+
+    .contact {
+      flex-direction: column;
     }
 }
 
